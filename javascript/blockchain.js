@@ -1,8 +1,10 @@
-var contractAddress = "0x04D51927fB51aaA6fEd4211a7D87d3F3210af6f6";
-var provider = new ethers.providers.Web3Provider(web3.currentProvider);
+var enderecoContrato = "0x04D51927fB51aaA6fEd4211a7D87d3F3210af6f6";
+var provedor = new ethers.providers.Web3Provider(web3.currentProvider);
 ethereum.enable();
-var signer = provider.getSigner();
-var contract = new ethers.Contract(contractAddress, contractAbi, signer);
+var signatario = provedor.getSigner();
+var contrato = new ethers.Contract(enderecoContrato, contractAbi, signatario);
+
+
 
 function valorDepositado() {    
     var boxBalance = document.getElementById("boxBalance");
